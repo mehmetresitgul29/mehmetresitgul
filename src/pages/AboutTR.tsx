@@ -1,17 +1,26 @@
 import { Briefcase } from 'lucide-react';
 import { useTheme } from '../ThemeContext';
+import { useEffect } from 'react';
 
 function AboutTR() {
   const { isDark } = useTheme();
 
+  useEffect(() => {
+    document.title = 'Mehmet Reşit Gül Hakkında - AI Otomasyon Geliştiricisi';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Mehmet Reşit Gül hakkında bilgi edinin. 17 yaşında AI otomasyon, n8n iş akışları ve e-ticaret çözümleri konusunda uzmanlaşmış startup kurucusu. İstanbul merkezli.');
+    }
+  }, []);
+
   return (
     <section className="min-h-screen pt-20 sm:pt-32 pb-20 relative z-10 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 transition-colors duration-300 ${
+        <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 transition-colors duration-300 ${
           isDark ? 'text-white' : 'text-gray-900'
         }`}>
           ben kimim<span className="text-cyan-400">_</span>
-        </h2>
+        </h1>
 
         <div className={`backdrop-blur-md border rounded-2xl sm:rounded-3xl p-6 sm:p-8 mb-12 shadow-2xl ${
           isDark

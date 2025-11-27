@@ -1,16 +1,25 @@
 import { useTheme } from '../ThemeContext';
+import { useEffect } from 'react';
 
 function ExperienceTR() {
   const { isDark } = useTheme();
 
+  useEffect(() => {
+    document.title = 'Deneyimler - Mehmet Reşit Gül';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Mehmet Reşit Gül\'ün deneyimlerini keşfedin: Takazade kurucusu, AI otomasyon geliştiricisi, n8n uzmanı, ürün geliştiricisi ve nörobilim araştırmacısı.');
+    }
+  }, []);
+
   return (
     <section className="min-h-screen pt-20 sm:pt-32 pb-20 relative z-10 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 transition-colors duration-300 ${
+        <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 transition-colors duration-300 ${
           isDark ? 'text-white' : 'text-gray-900'
         }`}>
           deneyim<span className="text-cyan-400">_</span>
-        </h2>
+        </h1>
         <div className="space-y-4 sm:space-y-6">
           <div className={`backdrop-blur-md border rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl hover:transition-all transition-all duration-300 animate-slide-in stagger-1 ${
             isDark

@@ -1,17 +1,26 @@
 import { Mail, Linkedin, Instagram } from 'lucide-react';
 import { useTheme } from '../ThemeContext';
+import { useEffect } from 'react';
 
 function ContactTR() {
   const { isDark } = useTheme();
 
+  useEffect(() => {
+    document.title = 'Mehmet Reşit Gül ile İletişim - İletişime Geçin';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'AI otomasyon projeleri, n8n iş akışları ve e-ticaret çözümleri için Mehmet Reşit Gül ile iletişime geçin. E-posta, Instagram, LinkedIn veya X üzerinden bağlanın.');
+    }
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center py-20 relative z-10 px-4">
       <div className="max-w-4xl mx-auto w-full">
-        <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 transition-colors duration-300 ${
+        <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 transition-colors duration-300 ${
           isDark ? 'text-white' : 'text-gray-900'
         }`}>
           iletişim<span className="text-cyan-400">_</span>
-        </h2>
+        </h1>
 
         <div className={`backdrop-blur-md border rounded-2xl sm:rounded-3xl p-8 sm:p-12 shadow-2xl animate-slide-in stagger-1 ${
           isDark
