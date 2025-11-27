@@ -9,7 +9,7 @@ function AboutTR() {
     document.title = 'Mehmet Reşit Gül Hakkında';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Mehmet Reşit Gül hakkında bilgi edinin. 17 yaşında AI otomasyon, n8n iş akışları ve e-ticaret çözümleri konusunda uzmanlaşmış startup kurucusu. İstanbul merkezli.');
+      metaDescription.setAttribute('content', 'Mehmet Reşit Gül hakkında bilgi edinin. 17 yaşında AI otomasyon, n8n iş akışları ve e-ticaret çözümleri konusunda uzmanlaşmış startup kurucusu.');
     }
   }, []);
 
