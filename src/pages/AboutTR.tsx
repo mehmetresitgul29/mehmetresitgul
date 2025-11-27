@@ -4,12 +4,12 @@ import { useEffect } from 'react';
 
 function AboutTR() {
   const { isDark } = useTheme();
-
+ 
   useEffect(() => {
-    document.title = 'Ben kimim?';
+    document.title = 'Mehmet Reşit Gül Hakkında - AI Otomasyon Geliştiricisi';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Ben Mehmet Reşit Gül. 17 yaşında solo girişimci, startup geliştiricisi ve AI otomasyon sistemleri üzerine çalışan biriyim. İstanbul'da yaşıyorum ve 11. sınıf öğrencisiyim; son üç yıldır sektörde aralıksız staj yaparak gerçek iş tecrübesi edindim.');
+      metaDescription.setAttribute('content', 'Mehmet Reşit Gül hakkında bilgi edinin. 17 yaşında AI otomasyon, n8n iş akışları ve e-ticaret çözümleri konusunda uzmanlaşmış startup kurucusu. İstanbul merkezli.');
     }
   }, []);
 
