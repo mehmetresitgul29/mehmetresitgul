@@ -6,7 +6,7 @@ function AboutTR() {
   const { isDark } = useTheme();
 
   useEffect(() => {
-    document.title = 'Mehmet Reşit Gül Hakkında - AI Otomasyon Geliştiricisi';
+    document.title = 'Ben kimim?';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Ben Mehmet Reşit Gül. 17 yaşında solo girişimci, startup geliştiricisi ve AI otomasyon sistemleri üzerine çalışan biriyim. İstanbul'da yaşıyorum ve 11. sınıf öğrencisiyim; son üç yıldır sektörde aralıksız staj yaparak gerçek iş tecrübesi edindim.');
